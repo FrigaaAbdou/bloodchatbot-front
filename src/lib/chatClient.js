@@ -1,6 +1,20 @@
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, "") ||
-  "http://localhost:3000";
+const API_BASE_URL = (() => {
+  const raw = import.meta.env.VITE_API_BASE_URL;
+  if (raw && raw.trim()) {
+    return raw.replace(/\/$/, "");
+  }
+
+  if (import.meta.env.DEV) {
+    console.warn(
+      "VITE_API_BASE_URL is not set. Falling back to http://localhost:3000 for local development.",
+    );
+    return "http://localhost:3000";
+  }
+
+  throw new Error(
+    "VITE_API_BASE_URL is required. Define it in your Netlify environment or .env file before building.",
+  );
+})();
 
 async function request(endpoint, options) {
   const url = `${API_BASE_URL}${endpoint}`;

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const VARIANTS = {
-  fadeIn: "motion-safe:animate-fade-in",
-  fadeDown: "motion-safe:animate-fade-down",
-  slideUp: "motion-safe:animate-slide-up",
+  fadeIn: "animate-fade-in",
+  fadeDown: "animate-fade-down",
+  slideUp: "animate-slide-up",
 };
 
 export function AnimatedSection({

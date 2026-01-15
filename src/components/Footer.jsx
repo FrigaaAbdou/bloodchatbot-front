@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-t border-white/5 py-10 text-slate-400 shadow-[0_-40px_120px_-60px_rgba(15,23,42,0.8)]">
-      <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-rose-200">
             SangBot

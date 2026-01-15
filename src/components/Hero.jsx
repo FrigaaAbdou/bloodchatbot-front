@@ -9,13 +9,17 @@ const navLinks = [
 
 export function Hero({ onPrimaryAction }) {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-rose-50">
+    <div className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-rose-50 animate-fade-in">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.18),_transparent_60%)]" />
       <div className="absolute inset-x-0 top-[-20%] -z-20 h-[420px] bg-[radial-gradient(circle_at_center,_rgba(225,29,72,0.08),_transparent_65%)] blur-3xl" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white/70 via-white/40 to-white/10" />
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
+      <div className="pointer-events-none absolute left-1/2 top-20 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-rose-300/40 via-rose-200/45 to-transparent blur-[140px] opacity-70 mix-blend-screen animate-heroGlow sm:h-[620px] sm:w-[620px]" />
+      <header
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 animate-fade-down"
+        style={{ animationDelay: "0.15s" }}
+      >
         <div className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-rose-500 text-white shadow-md shadow-rose-200">
+          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-rose-500 text-white shadow-md shadow-rose-200 animate-float">
             <Droplet className="h-6 w-6 text-white" strokeWidth={1.8} />
           </span>
           <div>
@@ -27,7 +31,7 @@ export function Hero({ onPrimaryAction }) {
             </p>
           </div>
         </div>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -48,7 +52,10 @@ export function Hero({ onPrimaryAction }) {
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:pb-24 lg:pt-16">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="text-center lg:text-left">
+          <div
+            className="text-center lg:text-left animate-slide-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             <span className="inline-flex items-center rounded-full bg-rose-100 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-rose-500">
               Prototype fictif — Français & Arabe
             </span>
@@ -93,7 +100,10 @@ export function Hero({ onPrimaryAction }) {
               </div>
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-xs rounded-[24px] border border-rose-100 bg-white p-5 shadow-xl shadow-rose-100/60 sm:max-w-sm lg:max-w-md">
+          <div
+            className="relative mx-auto w-full max-w-xs rounded-[24px] border border-rose-100 bg-white p-5 shadow-xl shadow-rose-100/60 animate-slide-up sm:max-w-sm lg:max-w-md"
+            style={{ animationDelay: "0.4s" }}
+          >
             <div className="flex items-center justify-between">
               <p className="text-sm font-semibold text-slate-700">
                 Premiere interaction

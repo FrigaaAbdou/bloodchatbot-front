@@ -124,7 +124,7 @@ export function ChatWidget({ onClose }) {
   }, [messages, isSending]);
 
   return (
-    <div className="fixed bottom-24 right-6 flex w-[22rem] max-h-[85vh] max-w-[92vw] flex-col overflow-hidden rounded-[28px] border border-rose-100 bg-white shadow-[0_32px_80px_rgba(225,29,72,0.28)] sm:right-8 sm:w-[24rem] md:bottom-28 md:w-[26rem]">
+    <div className="fixed bottom-24 right-4 flex w-[90vw] max-h-[85vh] max-w-[92vw] flex-col overflow-hidden rounded-[28px] border border-rose-100 bg-white shadow-[0_32px_80px_rgba(225,29,72,0.28)] animate-slide-up sm:right-8 sm:w-[24rem] sm:max-w-[24rem] md:bottom-28 md:w-[26rem] md:max-w-[26rem]">
       <header className="flex items-center justify-between bg-gradient-to-r from-rose-600 via-rose-500 to-rose-400 px-5 py-4 text-white">
         <div className="flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-3xl bg-white/15 shadow-inner shadow-rose-500/50">
@@ -179,7 +179,7 @@ export function ChatWidget({ onClose }) {
           return (
             <div
               key={message.id}
-              className={`flex items-start gap-3 ${isUser ? "flex-row-reverse" : ""} motion-safe:animate-scale-in`}
+              className={`flex items-start gap-3 ${isUser ? "flex-row-reverse" : ""} animate-scale-in`}
             >
               <span
                 className={`flex h-10 w-10 items-center justify-center rounded-3xl shadow-inner ${
